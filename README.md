@@ -7,19 +7,23 @@ Package includes a wrapper class [OneVsOneClassifier](models/multiclass.py) for 
 ### Kernels
 ##### Gaussian RBF Kernel
 The Gaussian Radial Basis Function is given by
+```
 $$k(x,y) = \exp\left(-\frac{1}{2\sigma^2}\|x-y\|^2\right)$$
+```
 where $\sigma$ is the parameter called the ```sigma``` which needs to be set. Default value of ```sigma``` is set to 0.5.
 
 ##### Polynomial Kernel
 The Polynomial kernel is given by
-```math
-k(x,y) = (x^{T}y + b)^{p}
+```
+$$k(x,y) = (x^{T}y + b)^{p}$$
 ```
 where $b$ is the parameter ```bias``` and $p$ is the parameter ```power``` which needs to be set. Default value of ```bias``` is set to 1 and default value of ```power``` is set to 2.
 
 ##### Linear Kernel
 The Linear  kernel is given by
+```
 $$k(x,y) = (x^{T}y)$$
+```
 
 
 ### Demos
