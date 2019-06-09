@@ -23,7 +23,7 @@ scaler = StandardScaler().fit(X_train)
 X_train_scaled = scaler.transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Initialize the CustomSVM clasifier with default parameters
+# Initialize the CustomSVM classifier with default parameters
 clf = CustomSVM()
 
 # Fit the model on the training data and time the process
