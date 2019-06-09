@@ -43,7 +43,7 @@ python demo_vowel.py
 
 
 ### Usage
-```
+```python
 from models.svm import CustomSVM
 clf = CustomSVM()
 clf.fit(X_train, y_train)
