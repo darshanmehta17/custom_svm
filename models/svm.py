@@ -4,8 +4,8 @@ import numpy as np
 class CustomSVM(object):
     """
     Custom implementation of SVM for binary classification with support for 
-    Gaussian RBF kernel, Polynomial kernel and Linear kernel. Uses Fast Gradient
-    Descent algorithm to minimize smoothed hinge loss. 
+        Gaussian RBF kernel, Polynomial kernel and Linear kernel. Uses Fast Gradient
+        Descent algorithm to minimize smoothed hinge loss. 
     
     Parameters:
     -----------
