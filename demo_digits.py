@@ -1,15 +1,18 @@
 from time import time
 
+from sklearn.datasets import load_digits
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 from models.svm import CustomSVM
-from utils import make_dataset, plot_misclassification_error
+from utils import plot_misclassification_error
 
 
-# Generate a binary dataset with 200 datapoints and 20 features
+# Get the digits dataset from scikit-learn for 2 classes
+X, y = load_digits(n_class=2, return_X_y=True)
+y = y.reshape(-1, 1)
+
 random_state = 0  # set random seed to allow reproducing results
-X, y = make_dataset(random_state=random_state)
 
 # Split the dataset into train and test in the ratio 80-20
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
@@ -41,6 +44,6 @@ print('Accuracy on the training data: {0:.4f}'.format(train_score))
 print('Accuracy on the testing data: {0:.4f}'.format(test_score))
 
 # Plot the misclassification error and save the image to a file
-output_file = './misclassification_error_simulated_custom_svm.png'
+output_file = './misclassification_error_digits_custom_svm.png'
 print('Saving misclassification plot to ' + output_file)
 plot_misclassification_error(clf, X_train_scaled, y_train, output_file)
