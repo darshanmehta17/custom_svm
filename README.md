@@ -12,7 +12,9 @@ where $\sigma$ is the parameter called the ```sigma``` which needs to be set. De
 
 ##### Polynomial Kernel
 The Polynomial kernel is given by
-$$k(x,y) = (x^{T}y + b)^{p}$$
+```math
+k(x,y) = (x^{T}y + b)^{p}
+```
 where $b$ is the parameter ```bias``` and $p$ is the parameter ```power``` which needs to be set. Default value of ```bias``` is set to 1 and default value of ```power``` is set to 2.
 
 ##### Linear Kernel
