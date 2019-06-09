@@ -56,7 +56,7 @@ class CustomSVM(object):
     objective_log_: List of objective values calculated at each iteration of
     the Fast Gradient Descent algorithm.
     
-    beta_log_: List of updated weights after each iteration of the Fast Gradient
+    param_log_: List of updated weights after each iteration of the Fast Gradient
     Descent algorithm.
     
     """
@@ -412,7 +412,7 @@ class CustomSVM(object):
 
         self.params_ = beta
         self.objective_log_ = objective_log
-        self.beta_log_ = betas
+        self.param_log_ = betas
         
         return self
         
@@ -428,7 +428,7 @@ class CustomSVM(object):
         
         weights: Weights of the model to use for predicting the class labels.
         Has shape (n_samples, 1). It is usually an entry from the class
-        attribute beta_log_. Default value is the class attribute params_.
+        attribute param_log_. Default value is the class attribute params_.
         
         Returns:
         --------
@@ -458,7 +458,7 @@ class CustomSVM(object):
         
         weights: Weights of the model to use for predicting the class labels.
         Has shape (n_samples, 1). It is usually an entry from the class
-        attribute beta_log_. Default value is the class attribute params_.
+        attribute param_log_. Default value is the class attribute params_.
         
         Returns:
         --------
