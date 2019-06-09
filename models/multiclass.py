@@ -36,7 +36,7 @@ class OneVsOneClassifier(object):
         -----------
         X: Training vectors of shape (n_samples, n_features).
         
-        y: Multiclass target values of shape (n_samples, 1).
+        y: Multiclass target values of shape (n_samples, ).
         
         Returns:
         --------
@@ -110,5 +110,5 @@ class OneVsOneClassifier(object):
         
         """
         y_pred = self.predict(X)
-        score = np.mean(y_pred == y)
+        score = np.mean(y_pred == y.reshape(-1, 1))
         return score

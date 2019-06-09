@@ -18,7 +18,7 @@ random_state = 0  # set random seed to allow reproducing results
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
                                                     random_state=random_state)
 
-# standardize the X values for both the train and the test data
+# Standardize the X values for both the train and the test data
 scaler = StandardScaler().fit(X_train)
 X_train_scaled = scaler.transform(X_train)
 X_test_scaled = scaler.transform(X_test)
